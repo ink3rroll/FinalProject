@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My eCommerce App - List of all Buyers
+{% endblock %}
+
+
+{% block content %}
+  <h1>Buyers</h1>
+  
+  <ul class="list-group">
+    {% for x in mybuyers %}
+      <li class="list-group-item"><a href="details/{{ x.id }}">{{ x.username }} </a></li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

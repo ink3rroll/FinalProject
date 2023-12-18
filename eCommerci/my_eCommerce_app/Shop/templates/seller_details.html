@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ mysellers.username }}
+{% endblock %}
+
+
+{% block content %}
+  <h1>Username: <bold>{{ mysellers.username }}</bold></h1>
+  
+  <p>Credit: Php {{ mysellers.credit }}</p>
+  <hr>
+  <h3>Products</h3>
+  <ul>
+    {% for x in mysellers.products.all %}
+      <li>{{ x.name }}</li>
+    {% endfor %}
+  </ul>
+  <p>Back to <a href="/sellers/">Sellers</a></p>
+  
+{% endblock %}

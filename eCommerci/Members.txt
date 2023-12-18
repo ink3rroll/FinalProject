@@ -1,0 +1,20 @@
+Seller
+ - username
+ - credit
+ - products
+Buyer
+ - username
+ - credit
+Products
+ - name
+ - price
+ - detail
+ - quantity
+MOP
+Receipt
+ - seller
+ - buyer
+ - product
+ - quantity
+ - total expense
+ - MOP

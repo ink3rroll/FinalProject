@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My eCommerce App - List of all Products
+{% endblock %}
+
+
+{% block content %}
+  <h1>Products</h1>
+  
+  <ul class="list-group">
+    {% for x in myproducts %}
+      <li class="list-group-item"><a href="details/{{ x.id }}">{{ x.name }} </a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

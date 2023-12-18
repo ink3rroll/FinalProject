@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+  My eCommerce App - List of all Receipts
+{% endblock %}
+
+
+{% block content %}
+  <h1>Receipts</h1>
+
+  <ul class="list-group">
+    {% for x in myreceipts %}
+      <li class="list-group-item"><a href="details/{{ x.id }}">Buyer#{{ x.buyer_id }} bought {{ x.quantity }} Product#{{ x.product_id }} from Seller#{{ x.seller_id }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ myreceipts.buyer.username }} - {{ myreceipts.seller.username }}
+{% endblock %}
+
+
+{% block content %}
+  <h1>Buyer: {{ myreceipts.buyer.username }}<br>Seller: {{ myreceipts.seller.username }}
+  </h1>
+  
+  <p>Product: {{ myreceipts.product }}</p>
+  <p>Quantity: {{ myreceipts.quantity }}</p>
+  <p>Total Expense: Php {{ total_expense }}</p>
+  <hr>
+  <p>Back to <a href="/receipts/">Receipts</a></p>
+  
+{% endblock %}
